@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.model;
 
 import java.util.Locale;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
@@ -34,6 +35,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * when upgrading to a new version of Hibernate Validator/ Bean Validation)
  */
 public class ValidatorTests {
+    private final static Logger LOGGER = Logger.getLogger(ValidatorTests.class.getName());
 
     private Validator createValidator() {
         LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
